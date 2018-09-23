@@ -44,3 +44,6 @@ switch (num) {
 for (let i = 0; i < 8; i++) {
 	console.log(i);
 }
+
+ let a = 0 || "" || 2 || undefined || true || falsе;
+ console.log(a); 
