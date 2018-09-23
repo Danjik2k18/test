@@ -1,36 +1,40 @@
 var money = "Ваш бюджет?";
 var magazin = "Название вашего магазина?";
+let time = 19;
 
 console.log(money);
 console.log(magazin);
 
-
-var mainlist = {};
-
-
-mainList = {
-	budget: 150/30,
+let mainList = {
+	budget: 150,
 	name_magazin: "Skar",
-	open : true
-	
-
+	open : true,
+	shopGoods: [],
+	employers: {},
 }
 
-var arr = ['tabble', 'chair', 'sofa']
+for (let i = 0; i < 5; i++) {
+	let a = prompt("Какой тип товаров будем продавать?");
+	
+	if ((typeof(a)) === 'string' && (typeof(a)) === null && a != '' && a.length < 50){
+		console.log('All good!');
+		mainList.shopGoods[i] = a;
+	} else {
 
-var employers = {};
+	}
+}
 
-employers = {};
+if (time < 0) {
+	console.log('Такого просто не может быть');
+} else if(time > 8 && time < 20){
+	console.log('Время работать!')
+	} else if(time < 24) {
+		console.log('Уже слишком поздно!');
+	} else {
+		console.log('В сутках только 24 часа!');
+	};
 
-var tovar = "Какой тип товаров будем продавать?";
-console.log(tovar);
 
-console.log(arr[0]);
-console.log(tovar);
+alert(mainList.budget/30);
 
-console.log(arr[1]);
-console.log(tovar);
-
-console.log(arr[2]);
-
-console.log("Budget - " + mainList["budget"]);
+console.log(mainList);
